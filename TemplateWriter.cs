@@ -36,7 +36,7 @@ public class TemplateWriter
 
 //we need code that unzips the writer document
 
-//-- from a helpful post --
+//-- from a helpful post by Porkopek on Stack Overflow --
 /// <summary>
     /// Gets all plain text from an .odt file
     /// </summary>
@@ -72,13 +72,30 @@ public class TemplateWriter
     } 
 
 //replaces the placeholders with the current values in one of the containing xml files
-
+    public String GetTextFromXml(String path)
+    {
+        
+        //returns text
+    }
+    public String ReplacePlaceholders(String text)
+    {
+        
+    }
 //creates the writer document again with the updated xml files
-
-//Then we return the writer document to the browser
-
+    ///recieve
+    public String CreateUpdatedOdt()
+    {
+        
+        //return path to document
+    }
+//Then we return the writer document to the browser-not now
+    
 //Later we could print to pdf, probably using a local installation of libreoffice
-
-//return the pdf to the browser
+    public String CreateUpdatedPdf()
+    {
+        
+        //return path to document
+    }
+//return the pdf to the browser-not now
 
 }
