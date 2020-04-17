@@ -103,7 +103,7 @@ public class TemplateWriter
     		string country = "Country";
     		string AccountId = "A0001";
 		
-	  	using (StreamReader reader = new StreamReader(Server.MapPath("~/XMLFile.xml")))
+	  	using (StreamReader reader = new StreamReader(Server.MapPath(path)))
     		{
         		body = reader.ReadToEnd();
     		}
