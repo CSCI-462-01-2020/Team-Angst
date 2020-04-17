@@ -102,10 +102,17 @@ public class TemplateWriter
     		string Receiver = "Child's Name";
     		string country = "Country";
     		string AccountId = "A0001";
-		//save list of placeholders that is the same length as replacers
-		//placeholders- this.placeholders
 		
-		//replacers- this.replacers
+	  	using (StreamReader reader = new StreamReader(Server.MapPath("~/XMLFile.xml")))
+    		{
+        		body = reader.ReadToEnd();
+    		}
+ 
+    		body = body.Replace("{SenderFullName}", !string.IsNullOrEmpty(Name) ? SenderName + breakline : "");
+    		body = body.Replace("{ReceiverFullName}", !string.IsNullOrEmpty(Receiver) ? Receiver + breakline : "");
+    		body = body.Replace("{ReceiverCountry}", !string.IsNullOrEmpty(country) ? country + breakline : "");
+    		body = body.Replace("{AccountId}", !string.IsNullOrEmpty(AccountId) ? AccountId + breakline : "");
+    		this.lblId.Text = body;
 		
         
     }
