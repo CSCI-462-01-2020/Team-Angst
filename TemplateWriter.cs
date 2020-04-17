@@ -95,7 +95,13 @@ public class TemplateWriter
 //replaces the placeholders with the current values in one of the containing xml files
     public void GetTextFromXml(String path)
     {
-		
+		string body = string.Empty;
+   		string breakline = "<br />";
+ 
+   		string Name = "Sponsor's Name";
+    		string Receiver = "Child's Name";
+    		string country = "Country";
+    		string AccountId = "A0001";
 		//save list of placeholders that is the same length as replacers
 		//placeholders- this.placeholders
 		
